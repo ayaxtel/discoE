@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+Select some of the text: <input type="text" value="Hello world!" onselect="myFunction()">
+
+<select id="etiqueta" onchange="ftx()">
+<option>A</option>
+<option>B</option>
+</select>
+
+<input list="data" id="etiquetay" onchange="fty()">
+<datalist id="data">
+<option value="X">
+<option value="Y">
+</datalist>
+
+
+
+</select>
+
+
+<script>
+function myFunction() {
+  alert("You selected some text!");
+}
+
+function ftx(){
+alert(document.getElementById('etiqueta').value)
+
+}
+
+function fty(){
+alert(document.getElementById('etiquetay').value)
+}
+
+</script>
+
+</body>
+</html>

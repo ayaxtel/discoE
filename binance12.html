@@ -1,0 +1,38 @@
+<DOCTYPE! html>
+<html>
+<head>
+
+<script>
+	const url = "https://api.binance.com/api/v3/ticker/price";
+	const url2 = "https://api.binance.com/api/v3/ticker/24hr";
+	
+//setInterval(myMoney, 1);
+
+//function myMoney(){	
+const promise1 = fetch(url)
+.then( response => response.json())
+.then( data => data[1432]);
+
+const promise2 = fetch(url2)
+.then( response => response.json())
+.then( data => data[1432]);
+
+Promise.all([promise1, promise2]).then(alldata => {
+	document.getElementById('v1').innerHTML = alldata[0].symbol;
+	document.getElementById('v2').innerHTML = alldata[0].price;
+}	
+);
+//}
+</script>
+</head>
+
+<body>
+<div id="v1">
+</div>
+
+<div id="v2">
+</div>
+</body>
+
+
+</html>

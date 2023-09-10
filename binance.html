@@ -1,0 +1,68 @@
+
+<DOCTYPE! html>
+<html>
+<head>
+
+<script>
+const reqJson = 'https://api.binance.com/api/v3/ticker/price'
+const testqa = "file:///C:/Users/Nelson%20Rincon/Desktop/Desarrollo/TestQA.js"
+
+
+
+setInterval(myMoney, 10000);
+myMoney()
+
+function myMoney(){
+
+//let moneda2	= document.getElementById("res2")
+//let moneda3	= document.getElementById("res3")
+
+
+	fetch(reqJson)
+  
+	.then(res => res.json())
+  	.then(response =>{
+	let moneda1 = document.getElementById("res")
+		let moneda2	= document.getElementById("res2")	
+		
+		
+	//if(response[1105].price > 2.000) alert('Nelson la moneda subio' + response[1432].price);
+	moneda1.innerHTML = "<p>token = " + response[296].symbol +" value = " + response[296].price + "</p>"
+	moneda2.innerHTML = "<p>token = " + response[499].symbol +" value = " + response[499].price+ "</p>"
+	
+	})
+
+	
+
+}  
+ 
+</script>
+
+<style>
+	body{
+		background-color: darkcyan; font-family: 'Lucida Sans';font-size: 1.5em;
+	}
+
+	p{
+		color: blanchedalmond;
+	}
+
+</style>
+
+</head>
+<body >
+
+<div id="res">
+</div>
+
+<div id="res2">
+</div>
+<div id="res3">
+</div>
+<div id="res4">
+</div>
+
+
+
+</body>
+</html>                                                              

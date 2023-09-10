@@ -1,0 +1,86 @@
+<DOCTYPE! html>
+
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> Cunsumiendo API binance</title>
+
+
+
+</head>
+
+
+
+
+
+<body>
+
+<header>
+
+</header>
+
+<section>
+</section>
+
+
+<h2>Valor de d1</h2>
+<div id="id1"></div>
+<h2>Valor de d2</h2>
+<div id="id2"></div>
+<h2>Este es otro en formato JSON</h2>
+<div id="id3"></div>
+
+<script>
+
+
+
+
+const reqJson = 'https://api.binance.com/api/v3/ticker/price';
+const resJson = new XMLHttpRequest();	//creado el objeto
+
+const header = document.querySelector('header');
+const section = document.querySelector('section');
+
+
+resJson.open('GET', reqJson);
+resJson.responseType = 'json';
+resJson.send();
+
+resJson.onload = function(){
+const token = resJson.response;
+func1(token);
+func2(token);
+document.writeln(reqJson);
+}
+
+function func1(tokenhead){
+  const head_from_json = document.createElement('h1');
+  head_from_json.textContent = tokenhead['symbol'];
+  header.appendChild(head_from_json);
+
+  const myPara = document.createElement('p');
+  myPara.textContent = 'Moneda: ' + tokenhead['price'];
+  header.appenChild(myPara);
+
+
+}
+
+
+
+
+const v1='["d1", "d2", "d3"]';
+const z1={valor1: 25, valor2: "un string"};
+const v2=JSON.parse(v1);
+const z2=JSON.stringify(z1);
+document.getElementById("id1").innerHTML = v2[0];
+document.getElementById("id2").innerHTML = v2[1];
+document.getElementById("id3").innerHTML = z2;
+
+
+
+</script>
+
+
+</body>
+</html>

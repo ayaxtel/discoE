@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<script>
+const reqJson = 'https://api.binance.com/api/v3/ticker/price'
+const testqa = "file:///C:/Users/Nelson%20Rincon/Desktop/Desarrollo/TestQA.js"
+
+        
+
+        let moneda = [];
+        let precio  = [];
+
+setInterval(myMoney, 5000);
+myMoney()
+
+function myMoney(){
+        
+
+		
+
+	fetch(reqJson)
+  
+	.then(res => res.json())
+  	.then(response =>{
+        
+        let moneda1 = document.getElementById("coin1")
+		let moneda2	= document.getElementById("coin2")
+		let moneda3	= document.getElementById("coin3")
+		let moneda4	= document.getElementById("coin4")
+
+        let precio1 = document.getElementById("prix1")
+		let precio2	= document.getElementById("prix2")
+		let precio3	= document.getElementById("prix3")
+		let precio4	= document.getElementById("prix4")        
+
+
+	console.log(response)
+
+		moneda.push(response[296].symbol);//ADA
+        
+		moneda.push(response[499].symbol);//MATIC
+		moneda.push(response[431].symbol);//LINK
+		moneda.push(response[1105].symbol);//FIL
+
+        precio.push(response[296].price)
+		precio.push(response[499].price)
+        precio.push(response[431].price)
+        precio.push(response[1105].price)
+        moneda1.innerHTML = '<p>' + moneda[0] + '</p>'
+        moneda2.innerHTML = '<p>' + moneda[1] + '</p>'
+        moneda3.innerHTML = '<p>' + moneda[2] + '</p>'
+        moneda4.innerHTML = '<p>' + moneda[3] + '</p>'
+
+        precio1.innerHTML = '<p>' +response[296].price+ '</p>'
+        precio2.innerHTML = '<p>' +response[499].price+ '</p>'  
+        precio3.innerHTML = '<p>' +response[431].price+ '</p>'
+        precio4.innerHTML = '<p>' +response[1105].price+ '</p>'  
+
+        if(response[1105].price==4.106)alert('llegó a 4.106')
+	
+	})
+
+	
+
+}  
+ 
+</script>
+
+<style>
+	body{display: flex;
+        
+		background-color: darkcyan; font-family: 'Lucida Sans';font-size: 1.5em;
+        width: 300px;
+        justify-content: space-between;
+	}
+
+    .moneda{
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .precio{
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+	p{
+		color: blanchedalmond;
+	}
+
+</style>
+
+</head>
+<body >
+    <div class="moneda">
+        <div id="coin1">
+        </div>
+
+        <div id="coin2">
+        </div>
+        <div id="coin3">
+        </div>
+        <div id="coin4">
+        </div>
+    </div>
+
+    <div class="precio">
+        <div id="prix1">
+        </div>
+
+        <div id="prix2">
+        </div>
+        <div id="prix3">
+        </div>
+        <div id="prix4">
+        </div>
+    </div>
+
+
+
+
+
+    
+
+
+
+
+</body>
+</html>                                                              

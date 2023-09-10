@@ -1,0 +1,236 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;800&display=swap');
+
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f5f5f5;
+    margin: 4vh 0 0;
+    padding: 0;
+}
+
+h2{
+text-align: center;
+font-size: 18px;
+padding: 1em;
+font-weight: 800;
+
+
+}
+
+p.text_content{
+  background-color: #052656;
+  color: #f5f5f5;
+  padding: 1em ;
+  line-height: 1.5em;
+  text-align: justify;
+  font-size: 1.3em;
+}
+
+  
+ .principal{
+  
+    margin: 0 auto; 
+      
+ } 
+ 
+ .element_1{
+    
+     width: 100%;     
+   
+     text-align: center;
+ }
+
+ .principal_2{
+  padding: 2em;
+ }
+
+
+ .parallax {
+  background-image: url("https://powersmithsolar.com/wp-content/uploads/2023/06/Powerful-EV-Charging-8.webp");  
+  min-height: 35em;   
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+ 
+ 
+ .elemento_a{
+   
+    background-color: #052656;
+ }
+ 
+ .elemento_a img:hover{
+   background-color: #e9622d;
+ }
+
+
+ .container_2{
+ padding: 1em;
+  background-color: #052656 ;
+   
+ }
+
+ 
+
+.element_1 img, .element_2 img{
+  max-width: 50%;
+        height: auto;
+}
+
+.container_3{
+ padding: 1em;
+  background-color: #052656 ; 
+}
+
+.element_3{
+    
+  width: 100%;     
+
+  text-align: center;
+}
+
+#logo{
+  background-color:#f5f5f5;
+  margin: 0 auto;
+}
+
+
+@media(min-width:670px){
+  
+
+
+  .principal{
+
+    display: flex;
+  }
+
+  
+
+
+ .container_2{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    
+  }
+
+
+  .element_2{
+    
+  text-align: center;
+   
+  }
+.element_2 img{
+  padding: 3em;
+  max-width: 20em;
+  height: auto;
+}
+  
+  .element_1 img{
+    max-width: 60%;
+    height: auto;
+  }
+
+
+
+  p.text_content{
+       
+    padding: 40px 100px ;
+    
+  }
+
+  h2{
+    text-align: center;
+    font-size: 2em;
+    
+    font-weight: 800;
+    clear: left;
+    
+    }
+
+    h4{
+      text-align: center;
+      font-size: 1.1em;
+      color:#f5f5f5;
+      margin: 5em;
+      font-weight: 800;
+      clear: left;
+
+    }
+
+
+    
+
+  .container_3{
+
+    display: flex;
+    margin: 2em auto; 
+
+  }
+
+  .element_3{
+     
+    justify-content: space-between;
+    
+   
+    text-align: center;
+  }
+
+  .principal_2{
+    background-color: #052656;
+  }
+
+
+  .container_4{
+    display: flex;
+    justify-content: center;
+
+  }
+
+  .element_4{
+    padding: 2em;
+  }
+
+  .element_4 img{
+    
+    max-width: 15em;
+   
+    height: auto;
+    
+  }
+
+
+  #logo{
+    background-color:#f5f5f5;
+    text-align: center;
+    padding: 2em;
+  }
+
+  .principal_3{
+    background-color:#052656;
+    text-align: center;
+    padding: 2em 0;
+    
+    justify-content: center;
+  }
+
+  .principal_3 img{
+    margin-right: 1em;
+    background-color: #e9622d;
+    border-radius: 200px;
+    max-width: 2.2em;;
+  }
+  
+  
+
+
+
+
+}
+
+
+ 
+

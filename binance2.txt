@@ -1,0 +1,42 @@
+<DOCTYPE! html>
+<html>
+<head>
+
+<script>
+const reqJson = 'https://api.binance.com/api/v3/ticker/price?symbol=SOLBUSD';
+
+
+setInterval(myMoney, 3600);
+
+function myMoney(){
+
+	fetch(reqJson)
+  
+	.then(res => res.json())
+  	.then(response =>{
+	if(response.price > 11.02) alert('Nelson la moneda subio' + response.price);
+	document.getElementById("res").innerHTML = "token = " + response.symbol +
+	" " + "value = " + response.price
+	document.title = response.price
+
+	})
+
+	
+
+}  
+ 
+</script>
+
+</head>
+<body onload="snd()">
+
+<div id="res">
+</div>
+
+<div id="res2">
+</div>
+
+
+
+</body>
+</html>                                                              

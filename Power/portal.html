@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>   
+    <title>W3.CSS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+
+.main{
+   
+    margin: 100px 20%;
+     
+    background-color: orange;
+    
+}
+
+
+.principal, .principal2{
+    
+    justify-content: center; 
+    margin: 0 auto 0 auto; 
+    
+    text-align: center;
+   
+    
+    
+}
+   
+.principal2{
+  
+    margin: 40px auto;
+    
+}
+
+.element_1{
+    padding: 10px;
+    flex-basis: 20%;/*se sustituye por width*/
+    background-color: green;
+}
+
+a {
+  box-shadow: inset 0 0 0 0 #54b3d6;
+  color: #54b3d6;
+	padding: 0 .25rem;
+	margin: 0 -.25rem;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+a:hover {
+  color: green;
+  box-shadow: inset 200px 0 0 0 #54b3d6;;
+}
+
+
+@media(min-width:670px){
+   .principal, .principal2{ 
+display: flex;
+justify-content: space-between;
+
+   }
+}
+
+
+
+    </style>
+</head>
+<body>
+
+<div class="main">
+  <div class="principal">      
+    <div class="element_1">
+        <a href="#"><img src="imagen1.png" ></a>  
+          <p>TITLE 1</p>
+
+    </div>
+    <div class="element_1">
+        <img src="imagen2.png" >  
+          <p>TITLE 2</p>
+    </div>
+    <div class="element_1">
+        <img src="imagen3.png" >  
+          <p>TITLE 3</p>
+    </div>
+    <div class="element_1">
+        <img src="imagen4.png" >  
+          <p>TITLE 4</p>
+    </div>
+ </div>
+
+
+<div class="principal2" >
+    <div class="element_1">
+        <img src="imagen5.png" >  
+          <p>TITLE 5</p>
+
+    </div>
+    <div class="element_1">
+        <img src="imagen6.png" >  
+          <p>TITLE 6</p>
+    </div>
+    <div class="element_1">
+        <img src="imagen7.png" >  
+          <p>TITLE 7</p>
+    </div>
+    <div class="element_1">
+        <img src="imagen8.png" >  
+          <p>TITLE 8</p>
+    </div>
+ </div>
+</div>
+ 
+
+</body>
+</html>       

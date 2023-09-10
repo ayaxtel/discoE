@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Arrays</h1>
+
+<p id="demo"></p>
+
+<script>
+//const cars = [20, 40, 40,60];
+
+
+let array = [1, 2, 3, 4, 2, 1,3];
+let frequencies = absoluteFrequency(array);
+
+function absoluteFrequency(array) {
+  // Create an empty object to store the frequencies.
+  let frequencies = {};
+
+  // Iterate over the array.
+  for (let element of array) {
+    // Get the current frequency of the element.
+    let frequency = frequencies[element] || 0 
+    
+
+    // Increment the frequency.
+    
+    frequencies[element] = frequency+1;   
+    
+  }
+
+  // Return the frequencies.
+  return frequencies;
+}
+
+
+
+</script>
+</body>
+</html>
+

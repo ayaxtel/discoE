@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>   
+    <title>W3.CSS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+
+.main{
+    
+    margin: 100px 20%;
+    
+    width: 800px;
+    
+    background-color: orange;
+
+}
+
+img:hover{
+  box-shadow: blue;
+}
+
+
+.principal, .principal2{
+    width: 800px;
+    justify-content: center; 
+    margin: 0 auto 0 auto; 
+    
+    text-align: center;
+    background-color: orange;
+    
+    
+    
+}
+   
+.principal2{
+  
+    margin: 40px 0 auto;
+    background-color: orange;
+}
+
+.element_1{
+
+   
+    flex-basis: 20%;/*se sustituye por width*/
+    
+    
+}
+
+.element_1:hover{
+  
+}
+
+.elemento_a{
+   padding: 10px;
+   background-color: green;
+}
+
+.elemento_a:hover{
+  background-color: red;
+}
+
+
+
+
+@media(min-width:670px){
+   .principal, .principal2{ 
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+
+   }
+
+
+
+   .main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   }
+}
+
+a.element_1:hover{
+  background-color: yellow;
+}
+
+
+p{
+  font-size: 0.5em;
+}
+
+    </style>
+</head>
+<body>
+
+<div class="main">
+  <div class="principal">      
+    
+    <div class="element_1">
+        
+      <a href="https://www.google.com">
+          <div class="elemento_a"> 
+            <img src="imagen1.png" >
+            <p>TITLE 1</p>
+          </div> 
+      </a>
+    </div> 
+  
+    <div class="element_1">
+      <a href="https://www.google.com">
+        <div class="elemento_a"> 
+          <img src="imagen2.png" >
+          <p>TITLE 2</p>
+        </div> 
+    </a> 
+    </div>
+
+    <div class="element_1">
+      <a href="https://www.google.com">
+        <div class="elemento_a"> 
+          <img src="imagen3.png" >
+          <p>TITLE 3</p>
+        </div> 
+    </a>
+    </div>
+    <div class="element_1">
+      <a href="https://www.google.com">
+        <div class="elemento_a"> 
+          <img src="imagen4.png" >
+          <p>TITLE 4</p>
+        </div> 
+    </a>
+    </div>
+ </div>
+
+
+<div class="principal2" >
+    <div class="element_1">
+      <a href="https://www.google.com">
+        <div class="elemento_a"> 
+          <img src="imagen5.png" >
+          <p>TITLE 5</p>
+        </div> 
+    </a>
+
+    </div>
+    <div class="element_1">
+      <a href="https://www.google.com">
+        <div class="elemento_a"> 
+          <img src="imagen6.png" >
+          <p>TITLE 6</p>
+        </div> 
+    </a> 
+    </div>
+    <div class="element_1">
+      <a href="https://www.google.com">
+        <div class="elemento_a"> 
+          <img src="imagen7.png" >
+          <p>TITLE 7</p>
+        </div> 
+    </a>
+    </div>
+    <div class="element_1">
+      <a href="https://www.google.com">
+        <div class="elemento_a"> 
+          <img src="imagen8.png" >
+          <p>TITLE 8</p>
+        </div> 
+    </a>
+    </div>
+ </div>
+</div>
+ 
+<but
+</body>
+</html>       
+

@@ -1,0 +1,31 @@
+const http = require('http');
+const fs = require('fs');
+
+// Crea un objeto que almacenará los valores.
+const data = {
+  "symbol": "triamgle",
+  "price": "20"
+};
+
+let cont = 0;
+
+// Define una ruta que devolverá los datos.
+const server = http.createServer((req, res) => {
+  // Actualiza los valores.
+  if(cont<12){
+
+  data.symbol = "crypto";
+  data.price = cont;
+
+  // Devuelve los datos.
+  res.writeHead(200, {'Content-Type': 'application/json'});
+  res.end(JSON.stringify(data));
+  cont++;
+  }
+  
+});
+
+// Inicia el servidor.
+server.listen(3000, () => {
+  console.log('El servidor está escuchando en el puerto 3000');
+});
